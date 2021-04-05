@@ -1,3 +1,9 @@
+body {
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.50), rgba(117, 19, 93, 0.75)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
+    }
+
+/* Toggles mobile nav */
+
 .toggle-button {
     width: 3rem;
     background: transparent;
@@ -20,7 +26,20 @@
     margin: 0.6rem 0;
 }
 
-.mobile-navbar {
+/* navbar-mobile first */
+
+.text-logo {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25rem;
+    margin-left: 2rem;
+}
+    
+.logo {
+    width: 4rem;
+}
+
+.mobile-nav {
 
 }
 
@@ -28,4 +47,14 @@
     .toggle-button {
         display: none;
     }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .text-logo {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 25rem;
+    }    
 }
