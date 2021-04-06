@@ -5,23 +5,30 @@ body {
     margin: 0;
 }
 
-    .main-header {
+.main-header {
+    display: flex;
     width: 100%;
     background: black;
     position: fixed;
     top: 0;
     }
 
+.mobile-nav__links {
+    display: none;
+}
+
+.main-nav__links {
+    display: none;
+}
+
 /* Toggles mobile nav */
 
 .toggle-button {
-    width: 3rem;
+    min-width: 3rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-    vertical-align: middle;
+    margin-left: 1rem;
 }
 
 .toggle-button:focus {
@@ -31,7 +38,7 @@ body {
 .toggle-button__bar {
     width: 100%;
     height: 0.2rem;
-    background: black;
+    background: whitesmoke;
     display: block;
     margin: 0.6rem 0;
 }
@@ -40,18 +47,33 @@ body {
 
 .text-logo {
     display: flex;
-    justify-content: space-evenly;
-    max-width: 25rem;
-    margin-left: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
     font: 400 1.4rem "Monterrat", sans-serif,
 }
 
 .logo {
-    width: 4rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    max-width: 4rem;
 }
 
 .main-nav__title {
-    font: 400 1.4rem "Monterrat", sans-serif,
+    font: 400 1.5rem Montserrat, sans-serif;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(45deg, #EB1331, #ffffff 40%, #42bfeb 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    margin: 0 auto;
+}
+
+#welcome {
+    height: 90vh;
 }
 
 @media (min-width: 40rem) {
@@ -67,5 +89,6 @@ body {
         display: flex;
         justify-content: space-evenly;
         max-width: 25rem;
+        margin-left: 2rem;
     }
 }
