@@ -10,6 +10,12 @@ body {
     background-color: black;
 }
 
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
 .mobile-nav__links {
     list-style-type: none;
 }
@@ -28,6 +34,7 @@ body {
 /* Toggles mobile nav */
 
 .toggle-button {
+    display: block;
     min-width: 3rem;
     background: transparent;
     border: none;
@@ -76,6 +83,8 @@ body {
 
 #welcome {
     height: 90vh;
+    text-align: center;
+    margin: auto 0;
 }
 
 @media (min-width: 40rem) {
@@ -111,8 +120,9 @@ body {
     .main-nav__links {
         display: flex;
         justify-content: space-between;
-        max-width: 15rem;
+        width: 15rem;
         list-style-type: none;
+        margin-right: 3rem;
     }
 
     .main-nav__link {
@@ -120,9 +130,10 @@ body {
         color: white;
         font: 300 1rem Montserrat, sans-serif;
         font-weight: 300;
+
     }
 
-    .main-nav {
-        width: 100%;
+    .main-nav__link:hover {
+        color: #42BFEB;
     }
 }
