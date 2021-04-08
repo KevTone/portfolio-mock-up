@@ -7,6 +7,7 @@ body {
 
 .main-header {
     display: flex;
+    align-items: center;
     background-color: black;
 }
 
@@ -15,6 +16,7 @@ body {
     text-align: center;
     padding: 1rem 0;
     background-color: black;
+    width: 100%;
 
 }
 
@@ -72,7 +74,7 @@ body {
 }
 
 .main-nav__title {
-    font: 400 1rem Montserrat, sans-serif;
+    font: 400 1.1rem Montserrat, sans-serif;
     color: white;
     background-color: black;
     background-image: linear-gradient(45deg, #EB1331, #ffffff 40%, #42bfeb 85%);
@@ -85,9 +87,36 @@ body {
 }
 
 #welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 90vh;
     text-align: center;
-    margin: auto 0;
+}
+
+.welcome__title {
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 4rem;
+    color: white;
+    background-color: white;
+    background-image: linear-gradient(45deg, #EB1331 30%, #ffffff 50%, #42bfeb 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    padding: 0 3rem;
+}
+
+.welcome__tagline {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    color: white;
+    padding: 0 3rem;
 }
 
 .open {
