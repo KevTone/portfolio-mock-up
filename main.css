@@ -11,20 +11,23 @@ body {
 }
 
 .mobile-nav {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
     background-color: black;
+
 }
 
 .mobile-nav__links {
     list-style-type: none;
+    margin: 1.5rem 0;
 }
 
 .mobile-nav__link {
     font: 300 1rem Montserrat, sans-serif;
     color: white;
-    font-weight: 300;
     text-decoration: none;
+    padding: 2rem 0;
 }
 
 .main-nav__links {
@@ -34,8 +37,7 @@ body {
 /* Toggles mobile nav */
 
 .toggle-button {
-    display: block;
-    min-width: 3rem;
+    min-width: 2.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -51,13 +53,14 @@ body {
     height: 0.2rem;
     background: whitesmoke;
     display: block;
-    margin: 0.6rem 0;
+    margin: 0.4rem 0;
 }
 
 /* navbar-mobile first */
 
 .text-logo {
     display: flex;
+    justify-content: space-;
     align-items: center;
     margin: 0.2rem;
 }
@@ -65,11 +68,11 @@ body {
 .logo {
     margin-right: 0.5rem;
     padding: 0.5rem;
-    max-width: 3rem;
+    max-width: 2.5rem;
 }
 
 .main-nav__title {
-    font: 400 1.2rem Montserrat, sans-serif;
+    font: 400 1rem Montserrat, sans-serif;
     color: white;
     background-color: black;
     background-image: linear-gradient(45deg, #EB1331, #ffffff 40%, #42bfeb 85%);
@@ -85,6 +88,10 @@ body {
     height: 90vh;
     text-align: center;
     margin: auto 0;
+}
+
+.open {
+    display: block !important;
 }
 
 @media (min-width: 40rem) {
@@ -113,8 +120,14 @@ body {
         margin-left: 2rem;
     }
 
+    .logo {
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        max-width: 3rem;
+    }
+
     .main-nav__title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .main-nav__links {
@@ -130,7 +143,6 @@ body {
         color: white;
         font: 300 1rem Montserrat, sans-serif;
         font-weight: 300;
-
     }
 
     .main-nav__link:hover {
