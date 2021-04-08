@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
 body {
-    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.50), rgba(117, 19, 93, 0.75)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.3), rgba(117, 19, 93, 1)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
     margin: 0;
 }
 
@@ -9,6 +9,8 @@ body {
     display: flex;
     align-items: center;
     background-color: black;
+    width: 100%;
+    position: fixed;
 }
 
 .mobile-nav {
@@ -89,25 +91,25 @@ body {
 #welcome {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 90vh;
     text-align: center;
 }
 
 .welcome__title {
     font-family: Montserrat, sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 4rem;
     color: white;
     background-color: white;
-    background-image: linear-gradient(45deg, #EB1331 30%, #ffffff 50%, #42bfeb 60%);
+    background-image: linear-gradient(45deg, #EB1331 10%, #ffffff 40%, #42bfeb 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    padding: 0 3rem;
+    padding: 3rem;
 }
 
 .welcome__tagline {
@@ -116,7 +118,7 @@ body {
     font-weight: 600;
     line-height: 2.5rem;
     color: white;
-    padding: 0 3rem;
+    padding: 3rem;
 }
 
 .open {
@@ -176,5 +178,12 @@ body {
 
     .main-nav__link:hover {
         color: #42BFEB;
+    }
+
+    .welcome__title {
+        font-size: 4rem;
+        line-height: 5rem;
+        background-image: linear-gradient(45deg, #EB1331 10%, #ffffff 50%, #42bfeb 80%);
+        margin-top: 6rem;
     }
 }
