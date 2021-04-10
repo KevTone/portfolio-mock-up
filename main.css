@@ -3,6 +3,7 @@
 body {
     background: linear-gradient(to bottom, rgba(245, 246, 252, 0.3), rgba(117, 19, 93, 1)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
     margin: 0;
+    font-family: Montserrat, sans-serif;
 }
 
 .main-header {
@@ -92,12 +93,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 90vh;
+    height: 95vh;
     text-align: center;
 }
 
 .welcome__title {
-    font-family: Montserrat, sans-serif;
     font-size: 3rem;
     font-weight: 600;
     line-height: 4rem;
@@ -113,13 +113,51 @@ body {
 }
 
 .welcome__tagline {
-    font-family: Montserrat, sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 2.5rem;
+    line-height: 3rem;
     color: white;
     padding: 3rem;
 }
+
+#projects {
+    background-color: hsl(200, 80%, 60%);
+    padding: 1rem 0 4rem 0;
+    text-align: center;
+}
+
+.projects__title {
+    color: white;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100vw;
+    padding: 2rem 0;
+}
+
+.projects__container a {
+    color:  hsl(200, 87%, 27%);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.projects__container a:hover,
+.projects__container a:active {
+    color: #EB1331;
+}
+
+.projects-tile__img {
+    max-width: 20rem;
+    box-shadow: 1px 5px 5px 1px rgba(0,0,0,0.4);
+    margin: 2rem 0 0.5rem 0;
+}
+
 
 .open {
     display: block !important;
@@ -185,5 +223,20 @@ body {
         line-height: 5rem;
         background-image: linear-gradient(45deg, #EB1331 10%, #ffffff 50%, #42bfeb 80%);
         margin-top: 6rem;
+    }
+
+    #projects {
+        justify-content: center;
+        background-color: hsl(200, 80%, 60%);
+        width: 100vw;
+        min-height: 80vh;
+        padding: 20px 0 60px 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .projects__container {
+        display: flex;
+        flex-direction: row;
     }
 }
