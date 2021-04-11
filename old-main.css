@@ -1,8 +1,8 @@
-html { 
+html {
   scroll-behavior: smooth;
 }
 
-body {  
+body {
   margin: 0;
   font-family: Montserrat, sans-serif;
 }
@@ -90,7 +90,7 @@ section {
   background-image: linear-gradient(45deg, #EB1331, #ffffff 40%, #42bfeb 85%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
@@ -134,7 +134,7 @@ section {
   background-image: linear-gradient(45deg, #EB1331 30%, #ffffff 50%, #42bfeb 60%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
@@ -170,7 +170,7 @@ section {
   padding: 25px;
   background-color: rgba(255,255,255,0.6);
   margin: 0 auto 60px;
-  
+
 }
 
 .project-tile {
@@ -190,6 +190,7 @@ section {
   color: white;
   background-color: rgba(255,255,255,0.3);
   padding: 15px 40px;
+  margin-top: 20rem;
 }
 
 /* Contact Section */
@@ -216,7 +217,7 @@ section {
   max-height: 80vh;
   padding: 25px;
   margin: 80px auto;
-  
+
 }
 .contact-links {
   display: flex;
@@ -239,7 +240,7 @@ section {
   #nav-header {
   flex-wrap: wrap;
   }
-  
+
   .text-logo {
     margin-bottom: 10px;
   }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
 body {
-    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.3), rgba(117, 19, 93, 1)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.3), rgba(117, 19, 93, 0.8)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
     margin: 0;
     font-family: Montserrat, sans-serif;
 }
@@ -122,8 +122,9 @@ body {
 
 #projects {
     background-color: hsl(200, 80%, 60%);
-    padding: 1rem 0 4rem 0;
+    padding: 1rem 0 6rem 0;
     text-align: center;
+
 }
 
 .projects__title {
@@ -139,6 +140,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     width: 100vw;
     padding: 2rem 0;
+    margin: 2rem 0 4rem 0;
 }
 
 .projects__container a {
@@ -158,6 +160,46 @@ body {
     margin: 2rem 0 0.5rem 0;
 }
 
+.projects__link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(255,255,255,0.4);
+    padding: 1rem 3rem;
+    text-decoration: none;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 90vh;
+    min-height: 60vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.contact__header {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__links {
+    list-style-type: none;
+}
+
+.contact__link {
+    text-decoration: none;
+    color: white;
+    font: 300 1rem Montserrat, sans-serif;
+}
 
 .open {
     display: block !important;
@@ -211,7 +253,6 @@ body {
         text-decoration: none;
         color: white;
         font: 300 1rem Montserrat, sans-serif;
-        font-weight: 300;
     }
 
     .main-nav__link:hover {
