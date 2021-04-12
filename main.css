@@ -23,6 +23,12 @@ body {
     position: fixed;
 }
 
+.main-nav__links {
+    display: none;
+}
+
+/* mobile nav */
+
 .mobile-nav {
     position: fixed;
     display: none;
@@ -55,9 +61,7 @@ body {
     margin: 0 auto;
 }
 
-.main-nav__links {
-    display: none;
-}
+/* /mobile nav */
 
 /* Toggles mobile nav */
 
@@ -220,6 +224,7 @@ body {
 .contact__header {
     font-size: 2rem;
     color: white;
+    padding-bottom: 2rem;
 }
 
 .contact__container {
@@ -260,11 +265,17 @@ body {
 
 /* /contact section */
 
+/* footer */
+
 .main-footer {
     background-color: rgba(0,0,0,0.25);
     padding: 1rem;
     color: white;
 }
+
+/* /footer */
+
+/* used with javascript for .mobile-nav display */
 
 .open {
     display: block !important;
@@ -332,17 +343,20 @@ body {
     }
 
     #projects {
-        justify-content: center;
         background-color: hsl(200, 80%, 60%);
         width: 100vw;
-        min-height: 80vh;
-        padding: 20px 0 60px 0;
+        padding: 1.4rem 0 5rem 0;
         margin: 0 auto;
-        text-align: center;
     }
 
     .projects__container {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .projects-tile__img {
+        max-width: 26rem;
     }
 }
