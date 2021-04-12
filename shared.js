@@ -1,9 +1,23 @@
-var toggleButton = document.querySelector(".toggle-button");
-var mobileNav = document.querySelector(".mobile-nav");
+const navLinks = document.querySelector('.mobile-nav__links');
+const toggleButton = document.querySelector('.toggle-button');
+const backdrop = document.querySelector('.backdrop');
+const mobileNav = document.querySelector('.mobile-nav');
 
-console.dir('.mobile-nav');
+// use const instead of var
+
+// console.dir('.mobile-nav');
 
 toggleButton.addEventListener('click', function() {
-    mobileNav.style.display = 'block';
     mobileNav.classList.add("open");
+    backdrop.classList.add("open");
+});
+
+navLinks.addEventListener('click', function() {
+    mobileNav.classList.remove("open");
+    backdrop.classList.remove("open");
+});
+
+backdrop.addEventListener('click', function() {
+    mobileNav.classList.remove("open");
+    backdrop.classList.remove("open");
 });

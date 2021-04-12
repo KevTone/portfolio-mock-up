@@ -7,6 +7,14 @@ body {
     text-align: center;
 }
 
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+
 .main-header {
     display: flex;
     align-items: center;
@@ -16,6 +24,7 @@ body {
 }
 
 .mobile-nav {
+    position: fixed;
     display: none;
     padding: 1rem 0;
     background-color: rgba(0,0,0,0.6);
@@ -27,22 +36,23 @@ body {
     list-style-type: none;
     margin-top: 4rem;
     padding-inline-start: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .mobile-nav__links li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.mobile-nav__links a:hover {
+    color: #42BFEB;
 }
 
 .mobile-nav__link {
     font: 400 1.2rem Montserrat, sans-serif;
     color: white;
     text-decoration: none;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+    margin: 0 auto;
 }
 
 .main-nav__links {
@@ -71,6 +81,8 @@ body {
     margin: 0.4rem 0;
 }
 
+/* /Toggles mobile nav */
+
 /* navbar-mobile first */
 
 .text-logo {
@@ -98,6 +110,10 @@ body {
     -moz-text-fill-color: transparent;
     margin: 0 auto;
 }
+
+/* /navbar-mobile first */
+
+/* welcome section */
 
 #welcome {
     display: flex;
@@ -128,6 +144,10 @@ body {
     color: white;
     padding: 3rem;
 }
+
+/* /welcome section */
+
+/* project section */
 
 #projects {
     background-color: hsl(200, 80%, 60%);
@@ -182,6 +202,10 @@ body {
     font-weight: 800;
 }
 
+/* /project section */
+
+/* contact section */
+
 #contact {
     display: flex;
     flex-direction: column;
@@ -189,6 +213,7 @@ body {
     max-height: 90vh;
     min-height: 60vh;
     width: 100vw;
+    height: 70vh;
     margin: 0 auto;
 }
 
@@ -206,14 +231,11 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    /* chrome default override */
     padding-inline-start: 0;
 }
 
 .contact__links li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
 }
 
@@ -223,6 +245,8 @@ body {
 }
 
 .contact__link {
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: white;
     font: 400 1.2rem Montserrat, sans-serif;
@@ -234,10 +258,12 @@ body {
     color: #42bfeb;
 }
 
+/* /contact section */
+
 .main-footer {
     background-color: rgba(0,0,0,0.25);
-    color: white;
     padding: 1rem;
+    color: white;
 }
 
 .open {
