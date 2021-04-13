@@ -49,8 +49,6 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .mobile-nav__links .mobile-nav__links a:hover {
-    color: #42BFEB; }
   .mobile-nav__links .mobile-nav__link {
     font-weight: 400;
     font-size: 1.2rem;
@@ -58,6 +56,9 @@ body {
     text-decoration: none;
     padding: 1rem 2rem;
     margin: 0 auto; }
+
+.mobile-nav__links a:hover {
+  color: #47b4eb; }
 
 /* /mobile nav */
 /* Toggles mobile nav */
@@ -67,14 +68,16 @@ body {
   border: none;
   cursor: pointer;
   margin-left: 1rem; }
-  .toggle-button .toggle-button:focus {
-    outline: none; }
   .toggle-button .toggle-button__bar {
     width: 100%;
     height: 0.2rem;
     background: white;
     display: block;
     margin: 0.4rem 0; }
+
+.toggle-button:focus,
+.toggle-button:active {
+  outline: none; }
 
 /* /Toggles mobile nav */
 /* navbar-mobile first */
@@ -98,8 +101,8 @@ body {
     font-size: 1.1rem;
     color: white;
     background-color: black;
-    background-image: -o-linear-gradient(45deg, #EB1331, #ffffff 40%, #42bfeb 85%);
-    background-image: linear-gradient(45deg, #EB1331, #ffffff 40%, #42bfeb 85%);
+    background: -o-linear-gradient(45deg, #EB1331, white 40%, #47b4eb 85%);
+    background: linear-gradient(45deg, #EB1331, white 40%, #47b4eb 85%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,8 +132,8 @@ body {
   line-height: 4rem;
   color: white;
   background-color: white;
-  background-image: -o-linear-gradient(45deg, #EB1331 10%, #ffffff 40%, #42bfeb 90%);
-  background-image: linear-gradient(45deg, #EB1331 10%, #ffffff 40%, #42bfeb 90%);
+  background: -o-linear-gradient(45deg, #EB1331 10%, white 40%, #47b4eb 90%);
+  background: linear-gradient(45deg, #EB1331 10%, white 40%, #47b4eb 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -168,13 +171,13 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   width: 100vw;
   padding: 2rem 0;
   margin: 2rem 0 4rem 0; }
 
 .projects__container a {
-  color: #095981;
+  color: #47b4eb;
   text-decoration: none;
   font-size: 1.4rem; }
 
@@ -262,7 +265,7 @@ body {
     padding: 0.5rem; }
   .contact__links .contact__link:hover,
   .contact__links .contact__link:active {
-    color: #42bfeb; }
+    color: #47b4eb; }
 
 /* /contact section */
 /* footer */
@@ -332,14 +335,13 @@ body {
     color: white;
     font-weight: 300;
     font-size: 1rem; }
-    .main-nav__link .main-nav__link:hover {
-      color: #42BFEB; }
+
+  .main-nav__link:hover {
+    color: #47b4eb; }
 
   .welcome__title {
     font-size: 4rem;
     line-height: 5rem;
-    background-image: -o-linear-gradient(45deg, #EB1331 10%, #ffffff 50%, #42bfeb 80%);
-    background-image: linear-gradient(45deg, #EB1331 10%, #ffffff 50%, #42bfeb 80%);
     margin-top: 6rem; }
 
   #projects {
@@ -357,8 +359,8 @@ body {
     flex--webkit-box-direction: normal;
     flex--ms-flex-direction: row;
     flex-flex-direction: row;
+    flex-wrap: wrap;
     flex--ms-flex-wrap: wrap;
-    flex-flex-wrap: wrap;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly; }
