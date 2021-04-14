@@ -2,7 +2,7 @@ $colors: (main: white, secondary: rgba(235, 19, 49, 0.5), tertiary: black, highl
 $font-color: map-get($colors, main);
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
-@mixin flex($direction: row, $spacing: center, $wrap: wrap) {
+@mixin flex($direction: row, $spacing: center, $align: center, $wrap: wrap) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -14,12 +14,19 @@ $font-color: map-get($colors, main);
         justify-content: $spacing;
         -ms-flex-pack: $spacing;
         justify-content: $spacing;
-            -webkit-box-align: $spacing;
-            -ms-flex-align: $spacing;
-            align-items: $spacing;
+            -webkit-box-align: $align;
+            -ms-flex-align: $align;
+            align-items: $align;
                 -ms-flex-wrap: $wrap;
                 flex-wrap: $wrap;
         }
+
+@mixin font-default($weight: 400, $size: 1.2rem) {
+    font: {
+        weight: $weight;
+        size: $size;
+    }
+}
 
 body {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.3)), to(rgba(117, 19, 93, 0.8))),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
@@ -79,10 +86,7 @@ ul {
     }
 
     .mobile-nav__link {
-        font: {
-            weight: 400;
-            size: 1.2rem;
-        }
+        @include font-default();
         color: $font-color;
         padding: 1rem 2rem;
         margin: 0 auto;
@@ -134,10 +138,7 @@ ul {
     }
 
     .main-nav__title {
-        font: {
-            weight: 400;
-            size: 1.2rem;
-        }
+        @include font-default();
         color: $font-color;
         background-color: map-get($colors, tertiary);
         background: -o-linear-gradient(45deg, map-get($colors, secondary) 1%, map-get($colors, main) 10%, map-get($colors, highlight) 85%);
@@ -161,10 +162,7 @@ ul {
 }
 
 .welcome__title {
-    font: {
-        size: 3rem;
-        weight: 600;
-    }
+@include font-default($weight: 600, $size: 3rem);
     line-height: 4rem;
     color: $font-color;
     background-color: map-get($colors, main);
@@ -179,8 +177,7 @@ ul {
 }
 
 .welcome__tagline {
-    font-size: 1.5rem;
-    font-weight: 500;
+    @include font-default($weight: 500, $size: 1.5rem);
     line-height: 3rem;
     color: $font-color;
     padding: 3rem;
@@ -197,8 +194,8 @@ ul {
 }
 
 .projects__title {
+    @include font-default($weight: 600, $size: 2rem);
     color: $font-color;
-    font-size: 2rem;
     padding-bottom: 0.5rem;
 }
 
@@ -211,8 +208,8 @@ ul {
 }
 
 .projects__container a {
+    @include font-default($weight: 600, $size: 1.4rem);
     color:  map-get($colors, highlight);
-    font-size: 1.4rem;
 }
 
 .projects__container a:hover,
@@ -228,16 +225,16 @@ ul {
 }
 
 .projects__link {
-    font-size: 1.5rem;
-    font-weight: 500;
+    @include font-default($weight: 500, $size: 1.5rem);
     color: $font-color;
     background-color: rgba(255,255,255,0.4);
     padding: 1rem 3rem;
 }
 
+//this doesn't seem to be affecting hover, active states.
 .projects__link a:hover,
 .projects__link a:active {
-    font-weight: 800;
+    color: map-get($colors, secondary);
 }
 
 /* /project section */
@@ -254,7 +251,7 @@ ul {
 }
 
 .contact__header {
-    font-size: 2rem;
+    @include font-default($weight: 600, $size: 2rem);
     color: $font-color;
     padding-bottom: 2rem;
 }
@@ -280,10 +277,7 @@ ul {
     .contact__link {
         @include flex($direction: column);
         color: $font-color;
-            font: {
-                weight: 400;
-                size: 1.2rem;
-            }
+        @include font-default();
         padding: 0.5rem;
     }
 
@@ -333,21 +327,19 @@ ul {
     }
 
     .main-nav__title {
-        font-size: 1.2rem;
+        @include font-default($weight: 500);
     }
 
     .main-nav__links {
         @include flex($spacing: space-between);
+        // why is align-center not working from the mixin?
         width: 15rem;
         margin-right: 3rem;
     }
 
     .main-nav__link {
         color: $font-color;
-        font: {
-            weight: 300;
-            size: 1rem;
-    }
+        @include font-default($weight: 300, $size: 1rem);
 }
 
 .main-nav__link:hover {
@@ -355,7 +347,7 @@ ul {
 }
 
     .welcome__title {
-        font-size: 4rem;
+        @include font-default($weight: 600, $size: 4rem);
         line-height: 5rem;
         margin-top: 6rem;
         background: -o-linear-gradient(45deg, map-get($colors, secondary) 30%, map-get($colors, main) 50%, map-get($colors, highlight) 70%);
