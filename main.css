@@ -98,11 +98,11 @@ body {
     max-width: 2.5rem; }
   .text-logo .main-nav__title {
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: white;
     background-color: black;
-    background: -o-linear-gradient(45deg, #EB1331, white 40%, #47b4eb 85%);
-    background: linear-gradient(45deg, #EB1331, white 40%, #47b4eb 85%);
+    background: -o-linear-gradient(45deg, rgba(235, 19, 49, 0.5) 1%, white 10%, #47b4eb 85%);
+    background: linear-gradient(45deg, rgba(235, 19, 49, 0.5) 1%, white 10%, #47b4eb 85%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -132,8 +132,8 @@ body {
   line-height: 4rem;
   color: white;
   background-color: white;
-  background: -o-linear-gradient(45deg, #EB1331 10%, white 40%, #47b4eb 90%);
-  background: linear-gradient(45deg, #EB1331 10%, white 40%, #47b4eb 90%);
+  background: -o-linear-gradient(45deg, rgba(235, 19, 49, 0.5) 20%, white 40%, #47b4eb 90%);
+  background: linear-gradient(45deg, rgba(235, 19, 49, 0.5) 20%, white 40%, #47b4eb 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,7 +143,7 @@ body {
 
 .welcome__tagline {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 3rem;
   color: white;
   padding: 3rem; }
@@ -156,7 +156,7 @@ body {
 
 .projects__title {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding-bottom: 0.5rem; }
 
 .projects__container {
@@ -183,7 +183,7 @@ body {
 
 .projects__container a:hover,
 .projects__container a:active {
-  color: #EB1331; }
+  color: rgba(235, 19, 49, 0.5); }
 
 .projects-tile__img {
   max-width: 20rem;
@@ -342,7 +342,14 @@ body {
   .welcome__title {
     font-size: 4rem;
     line-height: 5rem;
-    margin-top: 6rem; }
+    margin-top: 6rem;
+    background: -o-linear-gradient(45deg, rgba(235, 19, 49, 0.5) 30%, white 50%, #47b4eb 70%);
+    background: linear-gradient(45deg, rgba(235, 19, 49, 0.5) 30%, white 50%, #47b4eb 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent; }
 
   #projects {
     background-color: #47b4eb;

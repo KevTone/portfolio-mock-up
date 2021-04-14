@@ -1,4 +1,4 @@
-$colors: (main: white, secondary: #EB1331, tertiary: black, highlight: hsl(200, 80%, 60%));
+$colors: (main: white, secondary: rgba(235, 19, 49, 0.5), tertiary: black, highlight: hsl(200, 80%, 60%));
 $font-color: map-get($colors, main);
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
@@ -50,7 +50,7 @@ body {
     list-style-type: none;
     margin-top: 4rem;
     -webkit-padding-start: 0;
-            padding-inline-start: 0;
+    padding-inline-start: 0;
 
     li {
     display: -webkit-box;
@@ -128,12 +128,12 @@ body {
     .main-nav__title {
         font: {
             weight: 400;
-            size: 1.1rem;
+            size: 1.2rem;
         }
         color: $font-color;
         background-color: map-get($colors, tertiary);
-        background: -o-linear-gradient(45deg, map-get($colors, secondary), map-get($colors, main) 40%, map-get($colors, highlight) 85%);
-        background: linear-gradient(45deg, map-get($colors, secondary), map-get($colors, main) 40%, map-get($colors, highlight) 85%);
+        background: -o-linear-gradient(45deg, map-get($colors, secondary) 1%, map-get($colors, main) 10%, map-get($colors, highlight) 85%);
+        background: linear-gradient(45deg, map-get($colors, secondary) 1%, map-get($colors, main) 10%, map-get($colors, highlight) 85%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -172,8 +172,8 @@ body {
     line-height: 4rem;
     color: $font-color;
     background-color: map-get($colors, main);
-    background: -o-linear-gradient(45deg, map-get($colors, secondary) 10%, map-get($colors, main) 40%, map-get($colors, highlight) 90%);
-    background: linear-gradient(45deg, map-get($colors, secondary) 10%, map-get($colors, main) 40%, map-get($colors, highlight) 90%);
+    background: -o-linear-gradient(45deg, map-get($colors, secondary) 20%, map-get($colors, main) 40%, map-get($colors, highlight) 90%);
+    background: linear-gradient(45deg, map-get($colors, secondary) 20%, map-get($colors, main) 40%, map-get($colors, highlight) 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -184,7 +184,7 @@ body {
 
 .welcome__tagline {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 3rem;
     color: $font-color;
     padding: 3rem;
@@ -202,7 +202,7 @@ body {
 
 .projects__title {
     color: $font-color;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-bottom: 0.5rem;
 }
 
@@ -379,7 +379,7 @@ body {
             -ms-flex-align: center;
                 align-items: center;
         width: 100%;
-        background-color: black;
+        background-color: map-get($colors, tertiary);
         position: fixed;
         top: 0;
         }
@@ -434,6 +434,13 @@ body {
         font-size: 4rem;
         line-height: 5rem;
         margin-top: 6rem;
+        background: -o-linear-gradient(45deg, map-get($colors, secondary) 30%, map-get($colors, main) 50%, map-get($colors, highlight) 70%);
+        background: linear-gradient(45deg, map-get($colors, secondary) 30%, map-get($colors, main) 50%, map-get($colors, highlight) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
     }
 
     #projects {
