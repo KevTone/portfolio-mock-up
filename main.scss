@@ -2,6 +2,27 @@ $colors: (main: white, secondary: rgba(235, 19, 49, 0.5), tertiary: black, highl
 $font-color: map-get($colors, main);
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
+@mixin flex($direction: row, $spacing: center, $wrap: wrap) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex: {
+            direction: $direction;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: $direction;
+            flex-direction: $direction;
+                // justify-content, align-items not compiling from here.
+                // -webkit-box-pack: $spacing;
+                // -ms-flex-pack: $spacing;
+                // justify-content: $spacing;
+                // -webkit-box-align: $spacing;
+                // -ms-flex-align: $spacing;
+                // align-items: $spacing;
+                    wrap: $wrap;
+        }
+}
+
 body {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.3)), to(rgba(117, 19, 93, 0.8))),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
     background: -o-linear-gradient(top, rgba(245, 246, 252, 0.3), rgba(117, 19, 93, 0.8)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
@@ -9,6 +30,17 @@ body {
     margin: 0;
     font-family: Montserrat, sans-serif;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    /* chrome default override */
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
 }
 
 .backdrop {
@@ -20,12 +52,7 @@ body {
 }
 
 .main-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    @include flex();
     background-color: map-get($colors, tertiary);
     width: 100%;
     position: fixed;
@@ -47,20 +74,11 @@ body {
 }
 
 .mobile-nav__links {
-    list-style-type: none;
     margin-top: 4rem;
-    -webkit-padding-start: 0;
-    padding-inline-start: 0;
 
     li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        }
+        @include flex($direction: column);
+    }
 
     .mobile-nav__link {
         font: {
@@ -68,7 +86,6 @@ body {
             size: 1.2rem;
         }
         color: $font-color;
-        text-decoration: none;
         padding: 1rem 2rem;
         margin: 0 auto;
         }
@@ -87,7 +104,7 @@ body {
     background: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 1rem;
+    margin: 0.7rem 0 0 1rem;
 
     .toggle-button__bar {
         width: 100%;
@@ -108,16 +125,12 @@ body {
 /* navbar-mobile first */
 
 .text-logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-;
-        -ms-flex-pack: space-;
-            justify-content: space-;
+    @include flex();
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 0.2rem;
+    max-width: 25rem;
 
     .logo {
         margin-right: 0.5rem;
@@ -148,19 +161,8 @@ body {
 /* welcome section */
 
 #welcome {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-        flex: {
-            direction: column;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-        }
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    @include flex($direction: column);
+    justify-content: center;
     height: 95vh;
 }
 
@@ -207,16 +209,7 @@ body {
 }
 
 .projects__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex: {
-        direction: column;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
+    @include flex($direction: column);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -228,7 +221,6 @@ body {
 
 .projects__container a {
     color:  map-get($colors, highlight);
-    text-decoration: none;
     font-size: 1.4rem;
 }
 
@@ -250,7 +242,6 @@ body {
     color: $font-color;
     background-color: rgba(255,255,255,0.4);
     padding: 1rem 3rem;
-    text-decoration: none;
 }
 
 .projects__link a:hover,
@@ -263,19 +254,10 @@ body {
 /* contact section */
 
 #contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex: {
-        direction: column;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    -webkit-box-pack: center;
+    @include flex($direction: column);
+        -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+        justify-content: center;
     max-height: 90vh;
     min-height: 60vh;
     width: 100vw;
@@ -294,18 +276,10 @@ body {
 }
 
 .contact__links {
-    list-style-type: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    @include flex();
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    /* chrome default override */
-    -webkit-padding-start: 0;
-            padding-inline-start: 0;
 
     .contact__links li {
         padding: 1rem;
@@ -317,17 +291,7 @@ body {
     }
 
     .contact__link {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex: {
-            direction: column;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-        }
-        text-decoration: none;
+        @include flex($direction: column);
         color: $font-color;
             font: {
                 weight: 400;
@@ -341,6 +305,7 @@ body {
         color: map-get($colors, highlight);
     }
 }
+
 /* /contact section */
 
 /* footer */
@@ -369,9 +334,7 @@ body {
     }
 
     .main-nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include flex();
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
@@ -385,20 +348,7 @@ body {
         }
 
     .text-logo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
-        max-width: 25rem;
         margin-left: 2rem;
-    }
-
-    .logo {
-        margin-right: 0.5rem;
-        padding: 0.5rem;
-        max-width: 3rem;
     }
 
     .main-nav__title {
@@ -406,19 +356,15 @@ body {
     }
 
     .main-nav__links {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include flex();
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
         width: 15rem;
-        list-style-type: none;
         margin-right: 3rem;
     }
 
     .main-nav__link {
-        text-decoration: none;
         color: $font-color;
         font: {
             weight: 300;
@@ -451,18 +397,7 @@ body {
     }
 
     .projects__container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex: {
-            direction: row;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-                    wrap: wrap;
-                    -ms-flex-wrap: wrap;
-        }
+        @include flex();
         -webkit-box-pack: space-evenly;
             -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
