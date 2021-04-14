@@ -27,11 +27,18 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
-  flex--webkit-box-orient: horizontal;
-  flex--webkit-box-direction: normal;
-  flex--ms-flex-direction: row;
-  flex-flex-direction: row;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: black;
   width: 100%;
@@ -54,11 +61,18 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    flex--webkit-box-orient: horizontal;
-    flex--webkit-box-direction: normal;
-    flex--ms-flex-direction: column;
-    flex-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .mobile-nav__links .mobile-nav__link {
     font-weight: 400;
@@ -95,15 +109,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
-  flex--webkit-box-orient: horizontal;
-  flex--webkit-box-direction: normal;
-  flex--ms-flex-direction: row;
-  flex-flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0.2rem;
   max-width: 25rem; }
   .text-logo .logo {
@@ -130,13 +148,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  flex--webkit-box-orient: horizontal;
-  flex--webkit-box-direction: normal;
-  flex--ms-flex-direction: column;
-  flex-flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   height: 95vh; }
 
 .welcome__title {
@@ -176,15 +200,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  flex--webkit-box-orient: horizontal;
-  flex--webkit-box-direction: normal;
-  flex--ms-flex-direction: column;
-  flex-flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.8);
   width: 100vw;
   padding: 2rem 0;
@@ -221,15 +249,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  flex--webkit-box-orient: horizontal;
-  flex--webkit-box-direction: normal;
-  flex--ms-flex-direction: column;
-  flex-flex-direction: column;
-  flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   max-height: 90vh;
   min-height: 60vh;
   width: 100vw;
@@ -242,21 +274,26 @@ ul {
   padding-bottom: 2rem; }
 
 .contact__container {
-  background-color: rgba(255, 255, 255, 0.25); }
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 100vw; }
 
 .contact__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
-  flex--webkit-box-orient: horizontal;
-  flex--webkit-box-direction: normal;
-  flex--ms-flex-direction: row;
-  flex-flex-direction: row;
-  flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: space-evenly;
+  -ms-flex-align: space-evenly;
+  align-items: space-evenly;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   .contact__links .contact__links li {
     padding: 1rem; }
   .contact__links .contact__icons {
@@ -266,11 +303,18 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    flex--webkit-box-orient: horizontal;
-    flex--webkit-box-direction: normal;
-    flex--ms-flex-direction: column;
-    flex-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     color: white;
     font-weight: 400;
@@ -303,18 +347,19 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
-    flex--webkit-box-orient: horizontal;
-    flex--webkit-box-direction: normal;
-    flex--ms-flex-direction: row;
-    flex-flex-direction: row;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: space-between;
+    -ms-flex-align: space-between;
+    align-items: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 100%;
     background-color: black;
     position: fixed;
@@ -330,15 +375,19 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
-    flex--webkit-box-orient: horizontal;
-    flex--webkit-box-direction: normal;
-    flex--ms-flex-direction: row;
-    flex-flex-direction: row;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     justify-content: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: space-between;
+    -ms-flex-align: space-between;
+    align-items: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 15rem;
     margin-right: 3rem; }
 
@@ -372,15 +421,19 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
-    flex--webkit-box-orient: horizontal;
-    flex--webkit-box-direction: normal;
-    flex--ms-flex-direction: row;
-    flex-flex-direction: row;
-    flex-wrap: wrap;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: space-evenly;
+    -ms-flex-align: space-evenly;
+    align-items: space-evenly;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
 
   .projects-tile__img {
     max-width: 26rem; } }

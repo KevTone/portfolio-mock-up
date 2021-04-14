@@ -3,25 +3,23 @@ $font-color: map-get($colors, main);
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @mixin flex($direction: row, $spacing: center, $wrap: wrap) {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex: {
-            direction: $direction;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: $direction;
-            flex-direction: $direction;
-                // justify-content, align-items not compiling from here.
-                // -webkit-box-pack: $spacing;
-                // -ms-flex-pack: $spacing;
-                // justify-content: $spacing;
-                // -webkit-box-align: $spacing;
-                // -ms-flex-align: $spacing;
-                // align-items: $spacing;
-                    wrap: $wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+        -webkit-box-pack: $spacing;
+        -ms-flex-pack: $spacing;
+        justify-content: $spacing;
+        -ms-flex-pack: $spacing;
+        justify-content: $spacing;
+            -webkit-box-align: $spacing;
+            -ms-flex-align: $spacing;
+            align-items: $spacing;
+                -ms-flex-wrap: $wrap;
+                flex-wrap: $wrap;
         }
-}
 
 body {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.3)), to(rgba(117, 19, 93, 0.8))),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
@@ -52,7 +50,7 @@ ul {
 }
 
 .main-header {
-    @include flex();
+    @include flex($spacing: flex-start);
     background-color: map-get($colors, tertiary);
     width: 100%;
     position: fixed;
@@ -126,9 +124,6 @@ ul {
 
 .text-logo {
     @include flex();
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     margin: 0.2rem;
     max-width: 25rem;
 
@@ -162,7 +157,6 @@ ul {
 
 #welcome {
     @include flex($direction: column);
-    justify-content: center;
     height: 95vh;
 }
 
@@ -210,9 +204,6 @@ ul {
 
 .projects__container {
     @include flex($direction: column);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     background: rgba(255, 255, 255, 0.8);
     width: 100vw;
     padding: 2rem 0;
@@ -255,9 +246,6 @@ ul {
 
 #contact {
     @include flex($direction: column);
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
     max-height: 90vh;
     min-height: 60vh;
     width: 100vw;
@@ -272,14 +260,13 @@ ul {
 }
 
 .contact__container {
-    background-color: rgba(255,255,255,0.25)
+    background-color: rgba(255,255,255,0.25);
+    width: 100vw;
 }
 
 .contact__links {
-    @include flex();
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    @include flex($spacing: space-evenly);
+
 
     .contact__links li {
         padding: 1rem;
@@ -334,13 +321,7 @@ ul {
     }
 
     .main-nav {
-        @include flex();
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        @include flex($spacing: space-between);
         width: 100%;
         background-color: map-get($colors, tertiary);
         position: fixed;
@@ -356,10 +337,7 @@ ul {
     }
 
     .main-nav__links {
-        @include flex();
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        @include flex($spacing: space-between);
         width: 15rem;
         margin-right: 3rem;
     }
@@ -397,10 +375,7 @@ ul {
     }
 
     .projects__container {
-        @include flex();
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        @include flex($spacing: space-evenly);
     }
 
     .projects-tile__img {
