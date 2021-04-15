@@ -218,15 +218,12 @@ ul {
   width: 100vw;
   padding: 2rem 0;
   margin: 2rem 0 4rem 0; }
-
-.projects__container a {
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: #47b4eb; }
-
-.projects__container a:hover,
-.projects__container a:active {
-  color: rgba(235, 19, 49, 0.5); }
+  .projects__container a {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #47b4eb; }
+  .projects__container:hover, .projects__container:active {
+    color: rgba(235, 19, 49, 0.5); }
 
 .projects-tile__img {
   max-width: 20rem;
@@ -240,10 +237,8 @@ ul {
   color: white;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 1rem 3rem; }
-
-.projects__link a:hover,
-.projects__link a:active {
-  color: rgba(235, 19, 49, 0.5); }
+  .projects__link:hover, .projects__link:active {
+    color: rgba(235, 19, 49, 0.5); }
 
 /* /project section */
 /* contact section */

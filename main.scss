@@ -205,16 +205,17 @@ ul {
     width: 100vw;
     padding: 2rem 0;
     margin: 2rem 0 4rem 0;
-}
 
-.projects__container a {
-    @include font-default($weight: 600, $size: 1.4rem);
-    color:  map-get($colors, highlight);
-}
+    a {
+        @include font-default($weight: 600, $size: 1.4rem);
+        color:  map-get($colors, highlight);
+    }
 
-.projects__container a:hover,
-.projects__container a:active {
-    color: map-get($colors, secondary);
+    //for some reason, these pseudo selectors aren't working this way.
+    &:hover,
+    &:active {
+        color: map-get($colors, secondary);
+    }
 }
 
 .projects-tile__img {
@@ -229,12 +230,12 @@ ul {
     color: $font-color;
     background-color: rgba(255,255,255,0.4);
     padding: 1rem 3rem;
-}
 
-//this doesn't seem to be affecting hover, active states.
-.projects__link a:hover,
-.projects__link a:active {
-    color: rgba(235, 19, 49, 0.5);
+    //for some reason, these pseudo selectors aren't working this way.
+    &:hover,
+    &:active {
+        color: map-get($colors, secondary);
+    }
 }
 
 /* /project section */
