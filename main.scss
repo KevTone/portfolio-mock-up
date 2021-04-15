@@ -234,7 +234,7 @@ ul {
 //this doesn't seem to be affecting hover, active states.
 .projects__link a:hover,
 .projects__link a:active {
-    color: map-get($colors, secondary);
+    color: rgba(235, 19, 49, 0.5);
 }
 
 /* /project section */
