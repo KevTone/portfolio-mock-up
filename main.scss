@@ -28,6 +28,14 @@ $font-color: map-get($colors, main);
     }
 }
 
+@mixin clip($clip: text) {
+    background-clip: $clip;
+        -webkit-background-clip: $clip;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: $clip;
+        -moz-text-fill-color: transparent;
+    }
+
 body {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.3)), to(rgba(117, 19, 93, 0.8))),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
     background: -o-linear-gradient(top, rgba(245, 246, 252, 0.3), rgba(117, 19, 93, 0.8)),url("http://www.kevinmendes.com/wp-content/uploads/2021/03/background-1.jpg") center/cover fixed;
@@ -106,7 +114,7 @@ ul {
     background: transparent;
     border: none;
     cursor: pointer;
-    margin: 0.7rem 0 0 1rem;
+    margin-left: 1rem;
 
     .toggle-button__bar {
         width: 100%;
@@ -141,13 +149,9 @@ ul {
         @include font-default();
         color: $font-color;
         background-color: map-get($colors, tertiary);
-        background: -o-linear-gradient(45deg, map-get($colors, secondary) 1%, map-get($colors, main) 10%, map-get($colors, highlight) 85%);
-        background: linear-gradient(45deg, map-get($colors, secondary) 1%, map-get($colors, main) 10%, map-get($colors, highlight) 85%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
+        background: -o-linear-gradient(45deg, map-get($colors, secondary) 0%, map-get($colors, main) 10%, map-get($colors, highlight) 90%);
+        background: linear-gradient(45deg, map-get($colors, secondary) 0%, map-get($colors, main) 10%, map-get($colors, highlight) 90%);
+        @include clip();
         margin: 0 auto;
     }
 }
@@ -168,11 +172,7 @@ ul {
     background-color: map-get($colors, main);
     background: -o-linear-gradient(45deg, map-get($colors, secondary) 20%, map-get($colors, main) 40%, map-get($colors, highlight) 90%);
     background: linear-gradient(45deg, map-get($colors, secondary) 20%, map-get($colors, main) 40%, map-get($colors, highlight) 90%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    @include clip();
     padding: 3rem;
 }
 
@@ -246,7 +246,6 @@ ul {
     max-height: 90vh;
     min-height: 60vh;
     width: 100vw;
-    height: 70vh;
     margin: 0 auto;
 }
 
@@ -332,7 +331,6 @@ ul {
 
     .main-nav__links {
         @include flex($spacing: space-between);
-        // why is align-center not working from the mixin?
         width: 15rem;
         margin-right: 3rem;
     }
@@ -350,13 +348,9 @@ ul {
         @include font-default($weight: 600, $size: 4rem);
         line-height: 5rem;
         margin-top: 6rem;
-        background: -o-linear-gradient(45deg, map-get($colors, secondary) 30%, map-get($colors, main) 50%, map-get($colors, highlight) 70%);
-        background: linear-gradient(45deg, map-get($colors, secondary) 30%, map-get($colors, main) 50%, map-get($colors, highlight) 70%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
+        background: -o-linear-gradient(45deg, map-get($colors, secondary) 10%, map-get($colors, main) 40%, map-get($colors, highlight) 70%);
+        background: linear-gradient(45deg, map-get($colors, secondary) 10%, map-get($colors, main) 40%, map-get($colors, highlight) 70%);
+        @include clip();
     }
 
     #projects {
